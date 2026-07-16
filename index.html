@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Académica: Visita al Museo Interactivo de Ciencias (MIC)</title>
+    <meta name="description" content="Análisis pedagógico y didáctico de la visita académica al Museo Interactivo de Ciencias (MIC) en Quito, relacionando las experiencias con teorías de aprendizaje.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=5">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="site-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-atom logo-icon"></i>
+                <span class="logo-text">MIC<span class="logo-highlight">Didáctica</span></span>
+            </a>
+            
+            <nav id="navbar" class="main-navigation">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="#osos-movimiento" class="nav-link"><i class="fa-solid fa-paw"></i> Osos</a></li>
+                    <li><a href="#fisica-interactiva" class="nav-link"><i class="fa-solid fa-gears"></i> Física</a></li>
+                    <li><a href="#ludion" class="nav-link"><i class="fa-solid fa-droplet"></i> Ludión</a></li>
+                    <li><a href="#referencias" class="nav-link"><i class="fa-solid fa-book"></i> Referencias</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon theme-icon-dark"></i>
+                    <i class="fa-solid fa-sun theme-icon-light"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-graduation-cap"></i> Proyecto Integrador de Saberes
+            </div>
+            <h1 class="hero-title">Bitácora Pedagógica del Museo Interactivo de Ciencias</h1>
+            <p class="hero-lead">Un análisis crítico y fenomenológico de la interactividad museística y su mediación en la reestructuración de esquemas cognitivos y el aprendizaje sociocomunitario.</p>
+            
+            <!-- Academic Metadata Card (Institutional Design) -->
+            <div class="academic-card">
+                <div class="academic-card-header" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 1.5rem; width: 100%;">
+                    <img src="imagenes/logo-universidad.png" alt="Universidad Central del Ecuador" class="card-logo" style="height: 65px; width: 65px; max-height: 65px; max-width: 65px; object-fit: contain; flex-shrink: 0; display: block;">
+                    <div class="header-titles" style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1;">
+                        <span class="univ-title" style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; letter-spacing: 0.05em; color: var(--text-primary);">UNIVERSIDAD CENTRAL DEL ECUADOR</span>
+                        <span class="fac-title" style="font-family: var(--font-heading); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.05em; color: var(--accent-cyan); margin-top: 0.25rem;">CARRERA DE INFORMÁTICA</span>
+                    </div>
+                    <img src="imagenes/logo-carrera.png" alt="Carrera de Informática UCE" class="card-logo" style="height: 65px; width: 65px; max-height: 65px; max-width: 65px; object-fit: contain; flex-shrink: 0; display: block;">
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Estudiante</span>
+                        <span class="meta-value">ISAAC CHÁVEZ</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Asignatura</span>
+                        <span class="meta-value">Didáctica</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Docente</span>
+                        <span class="meta-value">OMAR PEREZ</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="#experimentos" class="btn btn-primary">Ver Experimentos <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="#referencias" class="btn btn-secondary">Referencias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section (Experimentos) -->
+    <main id="experimentos" class="main-content container">
+        
+        <!-- EXPERIMENTO 1: OSOS EN MOVIMIENTO -->
+        <section id="osos-movimiento" class="experiment-block scroll-reveal">
+            <div class="experiment-grid">
+                <!-- Visual Component (Image or Placeholder) -->
+                <div class="experiment-visual">
+                    <div class="image-wrapper">
+                        <!-- Img with local fallback -->
+                        <img src="imagenes/experimento1.jpg" alt="Módulo Osos en Movimiento - Museo Interactivo de Ciencias" class="exp-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback Dynamic Placeholder -->
+                        <div class="img-placeholder" style="display: none;">
+                            <div class="placeholder-glow" style="background: linear-gradient(135deg, #7928ca 0%, #00f2fe 100%);"></div>
+                            <div class="placeholder-content">
+                                <i class="fa-solid fa-paw placeholder-icon"></i>
+                                <p class="placeholder-title">Osos en Movimiento</p>
+                                <span class="placeholder-hint">Ubica tu fotografía en: <code class="code-path">imagenes/experimento1.jpg</code></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-caption">
+                        <span class="caption-tag">Evidencia Fotográfica 01</span>
+                        <p class="caption-text">Resolución del desafío físico-topológico para trazar el corredor biológico del oso de anteojos.</p>
+                    </div>
+                </div>
+
+                <!-- Theory and Analysis Component -->
+                <div class="experiment-info">
+                    <div class="exp-header">
+                        <div class="exp-number">01</div>
+                        <h2 class="exp-title">Módulo "Osos en Movimiento"</h2>
+                        <p class="exp-subtitle">Simulador de Corredores Biológicos y Resolución de Problemas</p>
+                    </div>
+
+                    <!-- Interactive Tabs Navigation -->
+                    <div class="tabs-nav" role="tablist" aria-label="Teorías del aprendizaje para Osos en Movimiento">
+                        <button id="tab-exp1-cog" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-exp1-cog" data-target="panel-exp1-cog">
+                            <i class="fa-solid fa-brain"></i> Cognitivista
+                        </button>
+                        <button id="tab-exp1-con" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-exp1-con" data-target="panel-exp1-con">
+                            <i class="fa-solid fa-puzzle-piece"></i> Constructivista
+                        </button>
+                        <button id="tab-exp1-soc" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-exp1-soc" data-target="panel-exp1-soc">
+                            <i class="fa-solid fa-users"></i> Histórico-Cultural
+                        </button>
+                    </div>
+
+                    <!-- Interactive Tabs Panels -->
+                    <div class="tabs-content">
+                        <!-- Cognitivista -->
+                        <div id="panel-exp1-cog" class="tab-panel active" role="tabpanel" aria-labelledby="tab-exp1-cog">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    En el módulo <strong>"Osos en Movimiento"</strong>, el visitante se enfrenta a un desafío lógico-espacial de resolución de problemas topológicos. Cognitivamente, el usuario debe construir una representación mental del espacio (el bosque nublado, el páramo y el corredor ecológico) y de las restricciones físicas de la cuerda. La <em>memoria de trabajo</em> y el ejecutivo central procesan en tiempo real las posibles trayectorias del aro a través de los nudos fijos.
+                                </p>
+                                <p class="pedagogical-text">
+                                    A través de la planificación estratégica, el estudiante formula hipótesis espaciales y evalúa los obstáculos físicos de forma sistemática. La diferencia entre el estado de bloqueo inicial del oso y la meta (completar el corredor biológico) estimula funciones ejecutivas como la previsión y la flexibilidad mental, reestructurando esquemas geométricos y físicos previos para asimilar la estructura tridimensional del problema.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"La percepción no es un simple reflejo de la realidad física, sino un proceso activo de construcción en el cual el sujeto interpreta los datos sensoriales a partir de sus esquemas cognitivos previos."</p>
+                                    <cite class="quote-author">— (Piaget, 1975, p. 84)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Constructivista -->
+                        <div id="panel-exp1-con" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp1-con" style="display: none;">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    Desde el enfoque constructivista, este módulo encarna el concepto de **aprendizaje por descubrimiento guiado** de Bruner y la teoría psicogenética del aprendizaje activo. El visitante adquiere el concepto ecológico de conectividad biológica de forma *enactiva*: manipulando físicamente el trayecto del oso a lo largo de la cuerda en lugar de memorizar una definición abstracta en un texto.
+                                </p>
+                                <p class="pedagogical-text">
+                                    Al toparse con nudos que detienen su avance, el estudiante entra en un *conflicto cognitivo*. Para superarlo y lograr el equilibrio, debe ensayar activamente nuevas formas de paso y orientaciones tridimensionales de la cuerda. Este proceso continuo de manipulación, retroalimentación empírica inmediata y resolución lógica promueve una reestructuración constructiva del conocimiento físico y de conservación del entorno natural.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"El conocimiento no se recibe pasivamente; es construido activamente por el sujeto cognoscente mediante la interacción con el entorno."</p>
+                                    <cite class="quote-author">— (Piaget, 1972, p. 112)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Historico-Cultural -->
+                        <div id="panel-exp1-soc" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp1-soc" style="display: none;">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    Bajo el enfoque de Vygotsky, la simulación física del corredor ecológico actúa como una **herramienta de mediación cultural** que externaliza e instrumentaliza la problemática de conservación del oso de anteojos. Este oso y la fragmentación de su hábitat son conceptos ecológicos socialmente construidos e históricos que se presentan a través del diseño pedagógico interactivo del museo.
+                                </p>
+                                <p class="pedagogical-text">
+                                    La resolución del acertijo espacial de la cuerda se realiza con frecuencia de forma cooperativa entre visitantes, estimulando la Zona de Desarrollo Próximo (ZDP) mediante el diálogo y la colaboración interpsicológica. Al formular estrategias de forma social, los participantes internalizan no solo la solución geométrica, sino el significado cultural de conservación, transformando un interés cotidiano en un pensamiento ecológico consciente y mediado.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"El desarrollo cultural del niño aparece dos veces: primero en el ámbito social (interpsicológico) y luego en el ámbito individual (intrapsicológico)."</p>
+                                    <cite class="quote-author">— (Vygotsky, 1978, p. 94)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIMENTO 2: FÍSICA INTERACTIVA -->
+        <section id="fisica-interactiva" class="experiment-block scroll-reveal">
+            <div class="experiment-grid reverse">
+                <!-- Visual Component (Image or Placeholder) -->
+                <div class="experiment-visual">
+                    <div class="image-wrapper">
+                        <!-- Img with local fallback -->
+                        <img src="imagenes/experimento2.jpg" alt="Sala de Física Interactiva - Museo Interactivo de Ciencias" class="exp-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback Dynamic Placeholder -->
+                        <div class="img-placeholder" style="display: none;">
+                            <div class="placeholder-glow" style="background: linear-gradient(135deg, #00f5a0 0%, #00f2fe 100%);"></div>
+                            <div class="placeholder-content">
+                                <i class="fa-solid fa-gears placeholder-icon"></i>
+                                <p class="placeholder-title">Física Interactiva</p>
+                                <span class="placeholder-hint">Ubica tu fotografía en: <code class="code-path">imagenes/experimento2.jpg</code></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-caption">
+                        <span class="caption-tag">Evidencia Fotográfica 02</span>
+                        <p class="caption-text">Comprobación experimental de ventaja mecánica y sistemas de transmisión de fuerzas.</p>
+                    </div>
+                </div>
+
+                <!-- Theory and Analysis Component -->
+                <div class="experiment-info">
+                    <div class="exp-header">
+                        <div class="exp-number">02</div>
+                        <h2 class="exp-title">Física Interactiva</h2>
+                        <p class="exp-subtitle">Palancas, Poleas y Transmisión de Fuerza</p>
+                    </div>
+
+                    <!-- Interactive Tabs Navigation -->
+                    <div class="tabs-nav" role="tablist" aria-label="Teorías del aprendizaje para Física Interactiva">
+                        <button id="tab-exp2-cog" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-exp2-cog" data-target="panel-exp2-cog">
+                            <i class="fa-solid fa-brain"></i> Cognitivista
+                        </button>
+                        <button id="tab-exp2-con" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-exp2-con" data-target="panel-exp2-con">
+                            <i class="fa-solid fa-puzzle-piece"></i> Constructivista
+                        </button>
+                        <button id="tab-exp2-soc" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-exp2-soc" data-target="panel-exp2-soc">
+                            <i class="fa-solid fa-users"></i> Histórico-Cultural
+                        </button>
+                    </div>
+
+                    <!-- Interactive Tabs Panels -->
+                    <div class="tabs-content">
+                        <!-- Cognitivista -->
+                        <div id="panel-exp2-cog" class="tab-panel active" role="tabpanel" aria-labelledby="tab-exp2-cog">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    La manipulación de sistemas de poleas y palancas requiere que el estudiante procese variables físicas abstractas (fuerza, distancia, resistencia) y las traduzca a un modelo de causalidad directa. La <em>memoria de trabajo</em>, de capacidad inherentemente limitada, se activa para codificar la proporción: a mayor número de poleas disminuye el esfuerzo físico requerido, pero se incrementa la longitud de cuerda necesaria.
+                                </p>
+                                <p class="pedagogical-text">
+                                    El visitante recupera de su <em>memoria a largo plazo</em> conceptos previos de física y los confronta con los datos inmediatos del experimento. El procesamiento semántico exitoso de esta experiencia reorganiza su esquema cognitivo en torno a la "ventaja mecánica", convirtiendo una sensación sensorio-motriz en un concepto estructurado en su mapa cognitivo de conceptos preexistentes.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"El aprendizaje significativo ocurre cuando la nueva información se conecta de manera sustancial y no arbitraria con los conceptos preexistentes en la estructura cognitiva del sujeto."</p>
+                                    <cite class="quote-author">— (Ausubel, 1968, p. 55)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Constructivista -->
+                        <div id="panel-exp2-con" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp2-con" style="display: none;">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    En esta sala, el constructivismo se manifiesta a través del principio fundamental del <strong>"aprender haciendo" (learning by doing)</strong> y el aprendizaje por descubrimiento guiado. El estudiante no lee de forma pasiva una ecuación sobre la conservación de la energía; experimenta corporalmente la reducción de la resistencia al emplear poleas sucesivas.
+                                </p>
+                                <p class="pedagogical-text">
+                                    La manipulación activa constituye un <em>andamiaje enactivo</em> (de representación por acción), donde la interacción motriz directa antecede a la comprensión representacional (el esquema de vectores en la ficha) y, finalmente, al pensamiento abstracto simbólico (fórmulas de física). De esta manera, el estudiante construye sus propios conceptos sobre la mecánica clásica a partir de la manipulación de objetos.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"El descubrimiento no es solo un método de aprendizaje, sino una actitud mental que capacita al estudiante para organizar lo aprendido de forma que sea útil en la resolución de nuevos problemas."</p>
+                                    <cite class="quote-author">— (Bruner, 1961, p. 22)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Historico-Cultural -->
+                        <div id="panel-exp2-soc" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp2-soc" style="display: none;">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    Para el enfoque vygotskyano, las palancas y poleas representan arquetipos de <strong>herramientas físicas</strong> que la especie humana ha desarrollado históricamente para amplificar su capacidad muscular y transformar la naturaleza. Al interactuar con ellas en el museo, el estudiante no realiza una simple acción física, sino una práctica mediada por objetos cargados de valor sociocultural e histórico.
+                                </p>
+                                <p class="pedagogical-text">
+                                    El andamiaje provisto por el diseño de la plataforma interactiva y la colaboración interpsicológica con compañeros o facilitadores en la Zona de Desarrollo Próximo (ZDP) permite al alumno dominar la ventaja mecánica. Este proceso demuestra que el dominio instrumental e intelectual es el resultado del acceso a sistemas simbólicos y artefactos construidos colectivamente.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"La herramienta física sirve como conductor de la influencia humana sobre el objeto de la actividad; está orientada externamente y debe mediar la relación del sujeto con la naturaleza."</p>
+                                    <cite class="quote-author">— (Vygotsky, 1978, p. 132)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIMENTO 3: GESTIÓN SOCIAL DEL AGUA -->
+        <section id="ludion" class="experiment-block scroll-reveal">
+            <div class="experiment-grid">
+                <!-- Visual Component (Image or Placeholder) -->
+                <div class="experiment-visual">
+                    <div class="image-wrapper">
+                        <!-- Img with local fallback -->
+                        <img src="imagenes/experimento3.jpg" alt="Módulo de Gestión Social del Agua - Sala Ludión" class="exp-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback Dynamic Placeholder -->
+                        <div class="img-placeholder" style="display: none;">
+                            <div class="placeholder-glow" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);"></div>
+                            <div class="placeholder-content">
+                                <i class="fa-solid fa-droplet placeholder-icon"></i>
+                                <p class="placeholder-title">Gestión del Agua</p>
+                                <span class="placeholder-hint">Ubica tu fotografía en: <code class="code-path">imagenes/experimento3.jpg</code></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-caption">
+                        <span class="caption-tag">Evidencia Fotográfica 03</span>
+                        <p class="caption-text">Interactividad con el simulador de distribución hídrica y llaves de paso para el análisis de consumo sectorial.</p>
+                    </div>
+                </div>
+
+                <!-- Theory and Analysis Component -->
+                <div class="experiment-info">
+                    <div class="exp-header">
+                        <div class="exp-number">03</div>
+                        <h2 class="exp-title">Módulo de Gestión del Agua</h2>
+                        <p class="exp-subtitle">Simulador Físico de Distribución y Consumo Sectorial</p>
+                    </div>
+
+                    <!-- Interactive Tabs Navigation -->
+                    <div class="tabs-nav" role="tablist" aria-label="Teorías del aprendizaje para la Gestión del Agua">
+                        <button id="tab-exp3-cog" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-exp3-cog" data-target="panel-exp3-cog">
+                            <i class="fa-solid fa-brain"></i> Cognitivista
+                        </button>
+                        <button id="tab-exp3-con" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-exp3-con" data-target="panel-exp3-con">
+                            <i class="fa-solid fa-puzzle-piece"></i> Constructivista
+                        </button>
+                        <button id="tab-exp3-soc" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-exp3-soc" data-target="panel-exp3-soc">
+                            <i class="fa-solid fa-users"></i> Histórico-Cultural
+                        </button>
+                    </div>
+
+                    <!-- Interactive Tabs Panels -->
+                    <div class="tabs-content">
+                        <!-- Cognitivista -->
+                        <div id="panel-exp3-cog" class="tab-panel active" role="tabpanel" aria-labelledby="tab-exp3-cog">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    En este módulo de la sala <strong>"Ludión"</strong>, la manipulación de las llaves de paso y la observación de recipientes de distinto volumen activan procesos cognitivos complejos ligados a la resolución de problemas y la formación de modelos mentales. Al responder a la pregunta reflexiva de la exhibición —<em>¿cómo distribuirías el agua si estuviera en tus manos, frente a cómo se distribuye realmente?</em>—, el estudiante experimenta una <strong>disonancia cognitiva</strong> entre sus esquemas éticos de equidad y la realidad empírica de los contenedores (donde los tanques de mayor tamaño representan a la industria o agroindustria, evidenciando un consumo dispar frente al doméstico).
+                                </p>
+                                <p class="pedagogical-text">
+                                    La <em>memoria de trabajo</em> codifica de forma analítica las variables operativas (estado de las llaves de paso, dirección del flujo gravitacional y velocidad de llenado por sector). El procesamiento semántico de este contraste reestructura el esquema previo de la escasez del agua, transformando una noción intuitiva y abstracta del recurso en una comprensión estructurada y crítica de la geopolítica del consumo de recursos.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"Para que el aprendizaje ocurra, la estructura cognitiva del alumno debe reorganizarse mediante la resolución de problemas que presenten un reto intelectual."</p>
+                                    <cite class="quote-author">— (Ausubel, 1976, p. 112)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Constructivista -->
+                        <div id="panel-exp3-con" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp3-con" style="display: none;">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    Desde la perspectiva constructivista, este simulador es una plasmación del principio de <strong>"aprender haciendo" (learning by doing)</strong> y del aprendizaje por descubrimiento estructurado. Al cerrar las llaves de paso intermedias entre los contenedores de consumo y accionar las válvulas principales, el estudiante actúa corporalmente sobre el flujo físico del agua.
+                                </p>
+                                <p class="pedagogical-text">
+                                    La manipulación activa e intencionada de las llaves funciona como un <em>andamiaje enactivo</em>. El alumno formula hipótesis espaciales e hídricas y las confronta al instante con los resultados de la gravedad y las capacidades de los tanques. El conflicto cognitivo surgido al ver desbordarse ciertos tanques mientras otros permanecen vacíos exige un proceso de asimilación y acomodación que ayuda a estructurar conceptualmente la ley de conservación y distribución de recursos hídricos.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"La enseñanza por descubrimiento consiste en guiar al estudiante para que participe activamente en el proceso de adquisición del saber, en lugar de ser un mero receptor de información ya elaborada."</p>
+                                    <cite class="quote-author">— (Bruner, 1966, p. 72)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Historico-Cultural -->
+                        <div id="panel-exp3-soc" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp3-soc" style="display: none;">
+                            <div class="panel-body">
+                                <p class="pedagogical-text">
+                                    Bajo el paradigma histórico-cultural de Vygotsky, este simulador físico de tuberías y contenedores funciona como una potente <strong>herramienta de mediación socio-ecológica</strong>. Los tanques etiquetados por sectores de consumo no son meros contenedores físicos, sino representaciones semióticas de las estructuras sociopolíticas y las tensiones del desarrollo humano de nuestra cultura.
+                                </p>
+                                <p class="pedagogical-text">
+                                    La interactividad promueve la discusión interpsicológica (social) entre los visitantes al debatir sobre la distribución socialmente justa frente a la real. El museo actúa como un espacio de andamiaje cultural donde, a través de la mediación instrumental y el lenguaje de los letreros y consignas de gestión, el estudiante internaliza una conciencia crítica colectiva, convirtiendo los conceptos cotidianos sobre el agua en conceptos científicos de ecología y gobernanza.
+                                </p>
+                                <blockquote class="apa-quote">
+                                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                                    <p class="quote-text">"El pensamiento científico no se desarrolla por un crecimiento puramente biológico; es el resultado de la apropiación de las herramientas lingüísticas y conceptuales de la cultura."</p>
+                                    <cite class="quote-author">— (Vygotsky, 1934, p. 182)</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- References Section -->
+    <section id="referencias" class="references-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <i class="fa-solid fa-book references-icon"></i>
+                <h2 class="references-title">Referencias Bibliográficas</h2>
+                <p class="references-subtitle">Fuentes teóricas y académicas empleadas para sustentar el análisis psicopedagógico.</p>
+            </div>
+            
+            <div class="references-list-card">
+                <ul class="references-list">
+                    <li class="ref-item">
+                        <span class="ref-marker">[1]</span>
+                        <div class="ref-content">
+                            <strong>Ausubel, D. P.</strong> (1968). <em>Educational Psychology: A Cognitive View</em>. Holt, Rinehart and Winston.
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[2]</span>
+                        <div class="ref-content">
+                            <strong>Ausubel, D. P.</strong> (1976). <em>Psicología educativa: Un punto de vista cognoscitivo</em>. Trillas.
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[3]</span>
+                        <div class="ref-content">
+                            <strong>Bruner, J. S.</strong> (1961). The act of discovery. <em>Harvard Educational Review</em>, 31(1), 21-32.
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[4]</span>
+                        <div class="ref-content">
+                            <strong>Bruner, J. S.</strong> (1966). <em>Toward a Theory of Instruction</em>. Harvard University Press.
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[5]</span>
+                        <div class="ref-content">
+                            <strong>Piaget, J.</strong> (1972). <em>Psychology and Epistemology: Towards a Theory of Knowledge</em>. Penguin.
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[6]</span>
+                        <div class="ref-content">
+                            <strong>Piaget, J.</strong> (1975). <em>L'équilibration des structures cognitives: Problème central du développement</em>. Presses Universitaires de France.
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[7]</span>
+                        <div class="ref-content">
+                            <strong>Vygotsky, L. S.</strong> (1934). <em>Thought and Language</em>. MIT Press (Traducción al inglés publicada en 1962).
+                        </div>
+                    </li>
+                    <li class="ref-item">
+                        <span class="ref-marker">[8]</span>
+                        <div class="ref-content">
+                            <strong>Vygotsky, L. S.</strong> (1978). <em>Mind in Society: The Development of Higher Psychological Processes</em>. Harvard University Press.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <span class="footer-logo">MIC<span class="logo-highlight">Didáctica</span></span>
+                <p class="footer-desc">Bitácora de campo digital orientada a la investigación psicopedagógica en espacios de educación no formal.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+</html>
