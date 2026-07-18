@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -29,9 +29,12 @@
             <nav id="navbar" class="main-navigation">
                 <ul class="nav-links">
                     <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="#historia" class="nav-link"><i class="fa-solid fa-clock-rotate-left"></i> Historia</a></li>
                     <li><a href="#osos-movimiento" class="nav-link"><i class="fa-solid fa-paw"></i> Osos</a></li>
                     <li><a href="#fisica-interactiva" class="nav-link"><i class="fa-solid fa-gears"></i> Física</a></li>
                     <li><a href="#ludion" class="nav-link"><i class="fa-solid fa-droplet"></i> Ludión</a></li>
+                    <li><a href="#parche-verde-game" class="nav-link"><i class="fa-solid fa-leaf"></i> Parche Verde</a></li>
+                    <li><a href="#comparacion" class="nav-link"><i class="fa-solid fa-square-poll-horizontal"></i> Comparación</a></li>
                     <li><a href="#referencias" class="nav-link"><i class="fa-solid fa-book"></i> Referencias</a></li>
                 </ul>
             </nav>
@@ -49,6 +52,19 @@
             </div>
         </div>
     </header>
+
+    <!-- Barra de Filtros Pedagógicos (Sincronización en Cascada) -->
+    <div class="pedagogical-filter-bar">
+        <div class="container filter-container">
+            <span class="filter-label"><i class="fa-solid fa-filter"></i> Enfocar Análisis en:</span>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-theory="all"><i class="fa-solid fa-eye"></i> Ver Todos</button>
+                <button class="filter-btn" data-theory="cog"><i class="fa-solid fa-brain"></i> Cognitivista (Piaget)</button>
+                <button class="filter-btn" data-theory="con"><i class="fa-solid fa-puzzle-piece"></i> Constructivista (Bruner)</button>
+                <button class="filter-btn" data-theory="soc"><i class="fa-solid fa-users"></i> Histórico-Cultural (Vygotsky)</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
@@ -90,6 +106,61 @@
             <div class="hero-actions">
                 <a href="#experimentos" class="btn btn-primary">Ver Experimentos <i class="fa-solid fa-arrow-down"></i></a>
                 <a href="#referencias" class="btn btn-secondary">Referencias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia Section -->
+    <section id="historia" class="historia-section scroll-reveal">
+        <div class="container">
+            <div class="section-header-centered">
+                <i class="fa-solid fa-clock-rotate-left historia-icon"></i>
+                <h2 class="historia-title">Historia del MIC: De Fábrica a Museo</h2>
+                <p class="historia-subtitle">Descubre el origen histórico de las instalaciones y su papel en el desarrollo de la ciencia y la comunidad.</p>
+            </div>
+            
+            <div class="historia-grid">
+                <!-- Timeline Info -->
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1935 - 1999</span>
+                            <h3 class="timeline-item-title">Fábrica "La Industrial"</h3>
+                            <p>En el tradicional barrio obrero de Chimbacalle, la Fábrica de Hilados y Tejidos de Algodón “La Industrial” se consolida como un motor económico clave para Quito. Durante más de 60 años, miles de obreros tejieron historias y textiles que impulsaron el desarrollo urbano industrial.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2006</span>
+                            <h3 class="timeline-item-title">Rehabilitación Patrimonial</h3>
+                            <p>Tras años de abandono después del cierre de la fábrica, el Municipio de Quito inicia un proyecto integral para recuperar esta infraestructura patrimonial única, conservando los galpones y maquinaria original para devolverle la vida al espacio con un nuevo propósito social.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2008 - Presente</span>
+                            <h3 class="timeline-item-title">Nacimiento del MIC</h3>
+                            <p>El 18 de diciembre de 2008 se inaugura el Museo Interactivo de Ciencia (MIC). El espacio se transforma en un centro de educación no formal donde el lema "prohibido no tocar" estimula la apropiación de conceptos científicos de forma vivencial y comunitaria.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video / Audio Player -->
+                <div class="video-container-card">
+                    <h3 class="video-card-title"><i class="fa-solid fa-play"></i> Recorrido por el MIC y su Entorno</h3>
+                    <div class="video-wrapper">
+                        <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; background: #000;">
+                            <source src="imagenes/video-mic.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video HTML5.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-desc">Este documental muestra la restauración de la antigua fábrica textil "La Industrial" y cómo se integró el aprendizaje científico en las salas museográficas actuales.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -142,13 +213,11 @@
                         </button>
                     </div>
 
-                    <!-- Interactive Tabs Panels -->
-                    <div class="tabs-content">
-                        <!-- Cognitivista -->
+                    <!-- Interactive                        <!-- Cognitivista -->
                         <div id="panel-exp1-cog" class="tab-panel active" role="tabpanel" aria-labelledby="tab-exp1-cog">
                             <div class="panel-body">
                                 <p class="pedagogical-text">
-                                    En el módulo <strong>"Osos en Movimiento"</strong>, el visitante se enfrenta a un desafío lógico-espacial de resolución de problemas topológicos. Cognitivamente, el usuario debe construir una representación mental del espacio (el bosque nublado, el páramo y el corredor ecológico) y de las restricciones físicas de la cuerda. La <em>memoria de trabajo</em> y el ejecutivo central procesan en tiempo real las posibles trayectorias del aro a través de los nudos fijos.
+                                    En el módulo <strong>"Osos en Movimiento"</strong>, el visitante se enfrenta a un desafío lógico-espacial de resolución de problemas topológicos. Cognitivamente, el usuario debe construir una representación mental del espacio (el bosque nublado, el páramo y el corredor ecológico) y de las restricciones físicas de la cuerda. La <span class="tooltip-term" data-def="Sistema de capacidad limitada que retiene temporalmente información activa para el procesamiento y resolución cognitiva.">memoria de trabajo</span> y el ejecutivo central procesan en tiempo real las posibles trayectorias del aro a través de los nudos fijos.
                                 </p>
                                 <p class="pedagogical-text">
                                     A través de la planificación estratégica, el estudiante formula hipótesis espaciales y evalúa los obstáculos físicos de forma sistemática. La diferencia entre el estado de bloqueo inicial del oso y la meta (completar el corredor biológico) estimula funciones ejecutivas como la previsión y la flexibilidad mental, reestructurando esquemas geométricos y físicos previos para asimilar la estructura tridimensional del problema.
@@ -165,10 +234,10 @@
                         <div id="panel-exp1-con" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp1-con" style="display: none;">
                             <div class="panel-body">
                                 <p class="pedagogical-text">
-                                    Desde el enfoque constructivista, este módulo encarna el concepto de **aprendizaje por descubrimiento guiado** de Bruner y la teoría psicogenética del aprendizaje activo. El visitante adquiere el concepto ecológico de conectividad biológica de forma *enactiva*: manipulando físicamente el trayecto del oso a lo largo de la cuerda en lugar de memorizar una definición abstracta en un texto.
+                                    Desde el enfoque constructivista, este módulo encarna el concepto de <span class="tooltip-term" data-def="Teoría de Jerome Bruner que promueve que el estudiante aprenda y deduzca conceptos mediante la experimentación activa guiada.">aprendizaje por descubrimiento guiado</span> de Bruner y la teoría psicogenética del aprendizaje activo. El visitante adquiere el concepto ecológico de conectividad biológica de forma *enactiva*: manipulando físicamente el trayecto del oso a lo largo de la cuerda en lugar de memorizar una definición abstracta en un texto.
                                 </p>
                                 <p class="pedagogical-text">
-                                    Al toparse con nudos que detienen su avance, el estudiante entra en un *conflicto cognitivo*. Para superarlo y lograr el equilibrio, debe ensayar activamente nuevas formas de paso y orientaciones tridimensionales de la cuerda. Este proceso continuo de manipulación, retroalimentación empírica inmediata y resolución lógica promueve una reestructuración constructiva del conocimiento físico y de conservación del entorno natural.
+                                    Al toparse con nudos que detienen su avance, el estudiante entra en un <span class="tooltip-term" data-def="Desequilibrio mental que ocurre al enfrentar una discrepancia entre esquemas previos y una nueva experiencia o problema físico.">conflicto cognitivo</span>. Para superarlo y lograr el equilibrio, debe ensayar activamente nuevas formas de paso y orientaciones tridimensionales de la cuerda. Este proceso continuo de manipulación, retroalimentación empírica inmediata y resolución lógica promueve una reestructuración constructiva del conocimiento físico y de conservación del entorno natural.
                                 </p>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -182,10 +251,10 @@
                         <div id="panel-exp1-soc" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp1-soc" style="display: none;">
                             <div class="panel-body">
                                 <p class="pedagogical-text">
-                                    Bajo el enfoque de Vygotsky, la simulación física del corredor ecológico actúa como una **herramienta de mediación cultural** que externaliza e instrumentaliza la problemática de conservación del oso de anteojos. Este oso y la fragmentación de su hábitat son conceptos ecológicos socialmente construidos e históricos que se presentan a través del diseño pedagógico interactivo del museo.
+                                    Bajo el enfoque de Vygotsky, la simulación física del corredor ecológico actúa como una <span class="tooltip-term" data-def="Artefactos físicos o simbólicos (lenguaje, diagramas) creados culturalmente que median entre el sujeto y su actividad cognitiva.">herramienta de mediación cultural</span> que externaliza e instrumentaliza la problemática de conservación del oso de anteojos. Este oso y la fragmentación de su hábitat son conceptos ecológicos socialmente construidos e históricos que se presentan a través del diseño pedagógico interactivo del museo.
                                 </p>
                                 <p class="pedagogical-text">
-                                    La resolución del acertijo espacial de la cuerda se realiza con frecuencia de forma cooperativa entre visitantes, estimulando la Zona de Desarrollo Próximo (ZDP) mediante el diálogo y la colaboración interpsicológica. Al formular estrategias de forma social, los participantes internalizan no solo la solución geométrica, sino el significado cultural de conservación, transformando un interés cotidiano en un pensamiento ecológico consciente y mediado.
+                                    La resolución del acertijo espacial de la cuerda se realiza con frecuencia de forma cooperativa entre visitantes, estimulando la <span class="tooltip-term" data-def="Concepto de Vygotsky: la distancia entre el nivel de desarrollo real (resolver un problema solo) y el nivel de desarrollo potencial (con ayuda de un mediador).">Zona de Desarrollo Próximo (ZDP)</span> mediante el diálogo y la colaboración interpsicológica. Al formular estrategias de forma social, los participantes internalizan no solo la solución geométrica, sino el significado cultural de conservación, transformando un interés cotidiano en un pensamiento ecológico consciente y mediado.
                                 </p>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -221,6 +290,70 @@
                         <span class="caption-tag">Evidencia Fotográfica 02</span>
                         <p class="caption-text">Comprobación experimental de ventaja mecánica y sistemas de transmisión de fuerzas.</p>
                     </div>
+
+                    <!-- Laboratorio Virtual de Poleas -->
+                    <div class="interactive-simulator-card" id="poleas-simulator">
+                        <div class="simulator-header">
+                            <i class="fa-solid fa-weight-hanging"></i>
+                            <span>Laboratorio Virtual de Poleas</span>
+                        </div>
+                        <div class="simulator-body">
+                            <div class="pulley-setup-selector">
+                                <button class="setup-btn active" data-setup="1">1 Polea (Fija)</button>
+                                <button class="setup-btn" data-setup="2">2 Poleas (Móvil)</button>
+                                <button class="setup-btn" data-setup="3">3 Poleas</button>
+                                <button class="setup-btn" data-setup="4">4 Poleas</button>
+                            </div>
+                            <div class="pulley-canvas-area">
+                                <svg id="pulley-svg" width="100%" height="240" viewBox="0 0 300 240">
+                                    <!-- Viga de soporte superior -->
+                                    <rect x="20" y="10" width="260" height="12" rx="4" fill="#4a5568" />
+                                    <rect x="40" y="22" width="220" height="2" fill="#718096" />
+                                    
+                                    <!-- Cables dinámicos -->
+                                    <path id="rope-path" d="" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 3" />
+                                    
+                                    <!-- Poleas fijas superiores y móviles inferiores -->
+                                    <g id="svg-pulleys"></g>
+                                    
+                                    <!-- Carga de 100 kg -->
+                                    <g id="svg-weight" transform="translate(150, 160)">
+                                        <path d="M-25,10 L25,10 L18,45 L-18,45 Z" fill="#2d3748" stroke="#00f5a0" stroke-width="2" />
+                                        <text x="0" y="32" fill="#00f5a0" font-size="11" font-weight="bold" text-anchor="middle">100 kg</text>
+                                        <!-- Gancho superior de la carga -->
+                                        <path d="M0,10 C0,0 -8,0 -8,-5 C-8,-10 0,-12 0,-15 C0,-12 8,-10 8,-5" fill="none" stroke="#718096" stroke-width="2" />
+                                    </g>
+                                    
+                                    <!-- Mano/Tirador interactivo -->
+                                    <g id="svg-handle" transform="translate(50, 100)">
+                                        <circle cx="0" cy="0" r="14" fill="#00f2fe" opacity="0.3" class="pulse-circle" />
+                                        <circle cx="0" cy="0" r="6" fill="#00f2fe" />
+                                        <text x="0" y="24" fill="#00f2fe" font-size="8" text-anchor="middle" font-weight="bold">JALAR</text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="pulley-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">Esfuerzo Requerido:</span>
+                                    <span class="metric-value" id="effort-value">100 kgf (980 N)</span>
+                                    <div class="metric-bar-bg">
+                                        <div class="metric-bar-fill" id="effort-bar" style="width: 100%; background: #ef4444;"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Cuerda a tirar:</span>
+                                    <span class="metric-value" id="cuerda-value">0.0 m</span>
+                                    <div class="metric-bar-bg">
+                                        <div class="metric-bar-fill" id="cuerda-bar" style="width: 0%; background: #00f2fe;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pulley-slider-control">
+                                <label for="rope-pull-slider">Tirar de la cuerda:</label>
+                                <input type="range" id="rope-pull-slider" min="0" max="100" value="0" class="simulator-slider">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Theory and Analysis Component -->
@@ -250,10 +383,10 @@
                         <div id="panel-exp2-cog" class="tab-panel active" role="tabpanel" aria-labelledby="tab-exp2-cog">
                             <div class="panel-body">
                                 <p class="pedagogical-text">
-                                    La manipulación de sistemas de poleas y palancas requiere que el estudiante procese variables físicas abstractas (fuerza, distancia, resistencia) y las traduzca a un modelo de causalidad directa. La <em>memoria de trabajo</em>, de capacidad inherentemente limitada, se activa para codificar la proporción: a mayor número de poleas disminuye el esfuerzo físico requerido, pero se incrementa la longitud de cuerda necesaria.
+                                    La manipulación de sistemas de poleas y palancas requiere que el estudiante procese variables físicas abstractas (fuerza, distancia, resistencia) y las traduzca a un modelo de causalidad directa. La <span class="tooltip-term" data-def="Sistema de capacidad limitada que retiene temporalmente información activa para el procesamiento y resolución cognitiva.">memoria de trabajo</span>, de capacidad inherentemente limitada, se activa para codificar la proporción: a mayor número de poleas disminuye el esfuerzo físico requerido, pero se incrementa la longitud de cuerda necesaria.
                                 </p>
                                 <p class="pedagogical-text">
-                                    El visitante recupera de su <em>memoria a largo plazo</em> conceptos previos de física y los confronta con los datos inmediatos del experimento. El procesamiento semántico exitoso de esta experiencia reorganiza su esquema cognitivo en torno a la "ventaja mecánica", convirtiendo una sensación sensorio-motriz en un concepto estructurado en su mapa cognitivo de conceptos preexistentes.
+                                    El visitante recupera de su <span class="tooltip-term" data-def="Almacén permanente de capacidad teóricamente ilimitada que retiene conocimientos, hechos y experiencias acumuladas a lo largo de la vida.">memoria a largo plazo</span> conceptos previos de física y los confronta con los datos inmediatos del experimento. El procesamiento semántico exitoso de esta experiencia reorganiza su esquema cognitivo en torno a la <span class="tooltip-term" data-def="Relación entre la fuerza de salida obtenida y la fuerza de entrada aplicada en una máquina simple, reduciendo el esfuerzo físico necesario.">ventaja mecánica</span>, convirtiendo una sensación sensorio-motriz en un concepto estructurado en su mapa cognitivo de conceptos preexistentes.
                                 </p>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -270,8 +403,13 @@
                                     En esta sala, el constructivismo se manifiesta a través del principio fundamental del <strong>"aprender haciendo" (learning by doing)</strong> y el aprendizaje por descubrimiento guiado. El estudiante no lee de forma pasiva una ecuación sobre la conservación de la energía; experimenta corporalmente la reducción de la resistencia al emplear poleas sucesivas.
                                 </p>
                                 <p class="pedagogical-text">
-                                    La manipulación activa constituye un <em>andamiaje enactivo</em> (de representación por acción), donde la interacción motriz directa antecede a la comprensión representacional (el esquema de vectores en la ficha) y, finalmente, al pensamiento abstracto simbólico (fórmulas de física). De esta manera, el estudiante construye sus propios conceptos sobre la mecánica clásica a partir de la manipulación de objetos.
+                                    La manipulación activa constituye un <span class="tooltip-term" data-def="Concepto de Bruner: soporte temporal que se basa en la representación del conocimiento a través de la acción motora directa y manipulación física.">andamiaje enactivo</span> (de representación por acción), donde la interacción motriz directa antecede a la comprensión representacional (el esquema de vectores en la ficha) y, finalmente, al pensamiento abstracto simbólico (fórmulas de física). De esta manera, el estudiante construye sus propios conceptos sobre la mecánica clásica a partir de la manipulación de objetos.
                                 </p>
+                                <div class="inline-demo-container">
+                                    <button class="inline-demo-btn" data-demo="poleas" data-val="1"><i class="fa-solid fa-circle-notch"></i> 1 Polea (Sin ventaja)</button>
+                                    <button class="inline-demo-btn" data-demo="poleas" data-val="2"><i class="fa-solid fa-circle-nodes"></i> 2 Poleas (50% esfuerzo)</button>
+                                    <button class="inline-demo-btn" data-demo="poleas" data-val="4"><i class="fa-solid fa-gears"></i> 4 Poleas (25% esfuerzo)</button>
+                                </div>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
                                     <p class="quote-text">"El descubrimiento no es solo un método de aprendizaje, sino una actitud mental que capacita al estudiante para organizar lo aprendido de forma que sea útil en la resolución de nuevos problemas."</p>
@@ -284,10 +422,10 @@
                         <div id="panel-exp2-soc" class="tab-panel" role="tabpanel" aria-labelledby="tab-exp2-soc" style="display: none;">
                             <div class="panel-body">
                                 <p class="pedagogical-text">
-                                    Para el enfoque vygotskyano, las palancas y poleas representan arquetipos de <strong>herramientas físicas</strong> que la especie humana ha desarrollado históricamente para amplificar su capacidad muscular y transformar la naturaleza. Al interactuar con ellas en el museo, el estudiante no realiza una simple acción física, sino una práctica mediada por objetos cargados de valor sociocultural e histórico.
+                                    Para el enfoque vygotskyano, las palancas y poleas representan arquetipos de <span class="tooltip-term" data-def="Instrumentos mecánicos o materiales creados históricamente que actúan como mediadores para alterar el entorno físico exterior.">herramientas físicas</span> que la especie humana ha desarrollado históricamente para amplificar su capacidad muscular y transformar la naturaleza. Al interactuar con ellas en el museo, el estudiante no realiza una simple acción física, sino una práctica mediada por objetos cargados de valor sociocultural e histórico.
                                 </p>
                                 <p class="pedagogical-text">
-                                    El andamiaje provisto por el diseño de la plataforma interactiva y la colaboración interpsicológica con compañeros o facilitadores en la Zona de Desarrollo Próximo (ZDP) permite al alumno dominar la ventaja mecánica. Este proceso demuestra que el dominio instrumental e intelectual es el resultado del acceso a sistemas simbólicos y artefactos construidos colectivamente.
+                                    El andamiaje provisto por el diseño de la plataforma interactiva y la colaboración interpsicológica con compañeros o facilitadores en la <span class="tooltip-term" data-def="Concepto de Vygotsky: la distancia entre el nivel de desarrollo real (resolver un problema solo) y el nivel de desarrollo potencial (con ayuda de un mediador).">Zona de Desarrollo Próximo (ZDP)</span> permite al alumno dominar la ventaja mecánica. Este proceso demuestra que el dominio instrumental e intelectual es el resultado del acceso a sistemas simbólicos y artefactos construidos colectivamente.
                                 </p>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -323,6 +461,71 @@
                         <span class="caption-tag">Evidencia Fotográfica 03</span>
                         <p class="caption-text">Interactividad con el simulador de distribución hídrica y llaves de paso para el análisis de consumo sectorial.</p>
                     </div>
+
+                    <!-- Simulador del Ludión de Descartes -->
+                    <div class="interactive-simulator-card" id="ludion-simulator">
+                        <div class="simulator-header">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Laboratorio Virtual: El Ludión de Descartes</span>
+                        </div>
+                        <div class="simulator-body">
+                            <div class="ludion-container-flex">
+                                <!-- Botella Virtual -->
+                                <div class="bottle-viewport">
+                                    <div class="bottle-cap"></div>
+                                    <div class="bottle-neck"></div>
+                                    <div class="bottle-body">
+                                        <!-- Agua líquida -->
+                                        <div class="bottle-water"></div>
+                                        <!-- Gotero flotante (Ludión) -->
+                                        <div class="ludion-gotero" id="ludion-gotero">
+                                            <div class="gotero-bulb"></div>
+                                            <div class="gotero-tube">
+                                                <!-- Burbuja de aire interna comprimible -->
+                                                <div class="gotero-air-bubble" id="gotero-air-bubble"></div>
+                                                <!-- Agua que ingresa al gotero -->
+                                                <div class="gotero-water-fill" id="gotero-water-fill"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Controles y métricas -->
+                                <div class="ludion-controls-panel">
+                                    <p class="sim-instructions"><strong>Interactúa:</strong> Usa el deslizador para <strong>apretar la botella</strong>. Observa cómo cambia el volumen del gas en el gotero y su flotabilidad.</p>
+                                    
+                                    <div class="pulley-metrics" style="margin-top: 0; gap: 0.75rem;">
+                                        <div class="metric-item">
+                                            <span class="metric-label">Presión Aplicada:</span>
+                                            <span class="metric-value" id="ludion-pressure-val">0% (1 atm)</span>
+                                            <div class="metric-bar-bg">
+                                                <div class="metric-bar-fill" id="ludion-pressure-bar" style="width: 0%; background: #718096;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="metric-item">
+                                            <span class="metric-label">Volumen de Aire:</span>
+                                            <span class="metric-value" id="ludion-air-val">100% (Máx)</span>
+                                            <div class="metric-bar-bg">
+                                                <div class="metric-bar-fill" id="ludion-air-bar" style="width: 100%; background: #00f2fe;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="metric-item">
+                                            <span class="metric-label">Densidad del Gotero:</span>
+                                            <span class="metric-value" id="ludion-density-val">0.95 g/cm³</span>
+                                            <div class="metric-bar-bg">
+                                                <div class="metric-bar-fill" id="ludion-density-bar" style="width: 20%; background: #00f5a0;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="ludion-slider-wrapper">
+                                        <label for="ludion-pressure-slider" class="slider-title-label"><i class="fa-solid fa-hand-holding-hand"></i> Presionar Botella:</label>
+                                        <input type="range" id="ludion-pressure-slider" min="0" max="100" value="0" class="simulator-slider pressure-slider">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Theory and Analysis Component -->
@@ -352,10 +555,10 @@
                         <div id="panel-exp3-cog" class="tab-panel active" role="tabpanel" aria-labelledby="tab-exp3-cog">
                             <div class="panel-body">
                                 <p class="pedagogical-text">
-                                    En este módulo de la sala <strong>"Ludión"</strong>, la manipulación de las llaves de paso y la observación de recipientes de distinto volumen activan procesos cognitivos complejos ligados a la resolución de problemas y la formación de modelos mentales. Al responder a la pregunta reflexiva de la exhibición —<em>¿cómo distribuirías el agua si estuviera en tus manos, frente a cómo se distribuye realmente?</em>—, el estudiante experimenta una <strong>disonancia cognitiva</strong> entre sus esquemas éticos de equidad y la realidad empírica de los contenedores (donde los tanques de mayor tamaño representan a la industria o agroindustria, evidenciando un consumo dispar frente al doméstico).
+                                    En este módulo de la sala <strong>"Ludión"</strong>, la manipulación de las llaves de paso y la observación de recipientes de distinto volumen activan procesos cognitivos complejos ligados a la resolución de problemas y la formación de modelos mentales. Al responder a la pregunta reflexiva de la exhibición —<em>¿cómo distribuirías el agua si estuviera en tus manos, frente a cómo se distribuye realmente?</em>—, el estudiante experimenta una <span class="tooltip-term" data-def="Conflicto mental que ocurre cuando las creencias éticas o expectativas de una persona se contradicen directamente con la evidencia empírica observada.">disonancia cognitiva</span> entre sus esquemas éticos de equidad y la realidad empírica de los contenedores (donde los tanques de mayor tamaño representan a la industria o agroindustria, evidenciando un consumo dispar frente al doméstico).
                                 </p>
                                 <p class="pedagogical-text">
-                                    La <em>memoria de trabajo</em> codifica de forma analítica las variables operativas (estado de las llaves de paso, dirección del flujo gravitacional y velocidad de llenado por sector). El procesamiento semántico de este contraste reestructura el esquema previo de la escasez del agua, transformando una noción intuitiva y abstracta del recurso en una comprensión estructurada y crítica de la geopolítica del consumo de recursos.
+                                    La <span class="tooltip-term" data-def="Sistema de capacidad limitada que retiene temporalmente información activa para el procesamiento y resolución cognitiva.">memoria de trabajo</span> codifica de forma analítica las variables operativas (estado de las llaves de paso, dirección del flujo gravitacional y velocidad de llenado por sector). El procesamiento semántico de este contraste reestructura el esquema previo de la escasez del agua, transformando una noción intuitiva y abstracta del recurso en una comprensión estructurada y crítica de la geopolítica del consumo de recursos.
                                 </p>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -372,8 +575,12 @@
                                     Desde la perspectiva constructivista, este simulador es una plasmación del principio de <strong>"aprender haciendo" (learning by doing)</strong> y del aprendizaje por descubrimiento estructurado. Al cerrar las llaves de paso intermedias entre los contenedores de consumo y accionar las válvulas principales, el estudiante actúa corporalmente sobre el flujo físico del agua.
                                 </p>
                                 <p class="pedagogical-text">
-                                    La manipulación activa e intencionada de las llaves funciona como un <em>andamiaje enactivo</em>. El alumno formula hipótesis espaciales e hídricas y las confronta al instante con los resultados de la gravedad y las capacidades de los tanques. El conflicto cognitivo surgido al ver desbordarse ciertos tanques mientras otros permanecen vacíos exige un proceso de asimilación y acomodación que ayuda a estructurar conceptualmente la ley de conservación y distribución de recursos hídricos.
+                                    La manipulación activa e intencionada de las llaves funciona como un <span class="tooltip-term" data-def="Concepto de Bruner: soporte temporal que se basa en la representación del conocimiento a través de la acción motora directa y manipulación física.">andamiaje enactivo</span>. El alumno formula hipótesis espaciales e hídricas y las confronta al instante con los resultados de la gravedad y las capacidades de los tanques. El <span class="tooltip-term" data-def="Desequilibrio mental que ocurre al enfrentar una discrepancia entre esquemas previos y una nueva experiencia o problema físico.">conflicto cognitivo</span> surgido al ver desbordarse ciertos tanques mientras otros permanecen vacíos exige un proceso de asimilación y acomodación que ayuda a estructurar conceptualmente la ley de conservación y distribución de recursos hídricos.
                                 </p>
+                                <div class="inline-demo-container">
+                                    <button class="inline-demo-btn" data-demo="ludion" data-val="70"><i class="fa-solid fa-hand-fist"></i> Apretar botella (Gotero se hunde)</button>
+                                    <button class="inline-demo-btn" data-demo="ludion" data-val="0"><i class="fa-solid fa-hand-holding-droplet"></i> Soltar botella (Gotero flota)</button>
+                                </div>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
                                     <p class="quote-text">"La enseñanza por descubrimiento consiste en guiar al estudiante para que participe activamente en el proceso de adquisición del saber, en lugar de ser un mero receptor de información ya elaborada."</p>
@@ -389,7 +596,7 @@
                                     Bajo el paradigma histórico-cultural de Vygotsky, este simulador físico de tuberías y contenedores funciona como una potente <strong>herramienta de mediación socio-ecológica</strong>. Los tanques etiquetados por sectores de consumo no son meros contenedores físicos, sino representaciones semióticas de las estructuras sociopolíticas y las tensiones del desarrollo humano de nuestra cultura.
                                 </p>
                                 <p class="pedagogical-text">
-                                    La interactividad promueve la discusión interpsicológica (social) entre los visitantes al debatir sobre la distribución socialmente justa frente a la real. El museo actúa como un espacio de andamiaje cultural donde, a través de la mediación instrumental y el lenguaje de los letreros y consignas de gestión, el estudiante internaliza una conciencia crítica colectiva, convirtiendo los conceptos cotidianos sobre el agua en conceptos científicos de ecología y gobernanza.
+                                    La interactividad promueve la discusión interpsicológica (social) entre los visitantes al debatir sobre la distribución socialmente justa frente a la real. El museo actúa como un espacio de andamiaje cultural donde, a través de la mediación instrumental y el lenguaje de los letreros y consignas de gestión, el estudiante internaliza una conciencia crítica colectiva, convirtiendo los conceptos cotidianos sobre el agua en <span class="tooltip-term" data-def="Sistemas de conocimiento estructurados y lógicos adquiridos a través del andamiaje formal, en contraste con los conceptos cotidianos espontáneos.">conceptos científicos</span> de ecología y gobernanza.
                                 </p>
                                 <blockquote class="apa-quote">
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -404,6 +611,287 @@
         </section>
 
     </main>
+
+    <!-- Section: Parche Verde Game & Trivia -->
+    <section id="parche-verde-game" class="game-section scroll-reveal">
+        <div class="container">
+            <div class="section-header-centered">
+                <i class="fa-solid fa-leaf game-section-icon"></i>
+                <h2 class="game-section-title">¡Crea un Parche Verde en la Ciudad!</h2>
+                <p class="game-section-subtitle">Recreación interactiva de la exhibición del museo. Desliza los bloques para oxigenar el entorno urbano de Quito.</p>
+            </div>
+
+            <div class="game-grid-container">
+                <!-- The Game Board Card -->
+                <div class="game-card">
+                    <div class="game-card-header">
+                        <div class="game-badge">
+                            <i class="fa-solid fa-gamepad"></i> Minijuego Interactivo
+                        </div>
+                        <div class="game-instructions">
+                            <p><strong>Desafío:</strong> Con un solo movimiento de uno de los bloques grises (edificios y calles), crea un parche verde urbano (parque/bosque) en medio de la ciudad gris.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="game-board-wrapper">
+                        <!-- Playboard -->
+                        <div class="game-board" id="parche-board">
+                            <!-- Visual Track Indicators in Background -->
+                            <div class="visual-track track-top-bg"></div>
+                            <div class="visual-track track-bottom-bg"></div>
+                            <div class="visual-track track-left-bg"></div>
+                            <div class="visual-track track-right-bg"></div>
+
+                            <!-- Background green patch -->
+                            <div class="green-patch-bg" id="green-patch">
+                                <i class="fa-solid fa-tree tree-icon"></i>
+                                <i class="fa-solid fa-leaf leaf-icon"></i>
+                                <i class="fa-solid fa-tree tree-icon"></i>
+                            </div>
+                            
+                            <!-- Sliding Blocks (Grey) -->
+                            <div class="sliding-block block-gray" id="block-top" data-pos="out">
+                                <div class="building-texture">
+                                    <span>🏢 Edificios Norte</span>
+                                </div>
+                            </div>
+                            <div class="sliding-block block-gray" id="block-right" data-pos="out">
+                                <div class="building-texture">
+                                    <span>🏢 Edificios Este</span>
+                                </div>
+                            </div>
+                            <div class="sliding-block block-gray" id="block-bottom" data-pos="in">
+                                <div class="building-texture">
+                                    <span>🏢 Edificios Sur</span>
+                                </div>
+                            </div>
+                            <div class="sliding-block block-gray" id="block-left" data-pos="out">
+                                <div class="building-texture">
+                                    <span>🏢 Edificios Oeste</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-controls">
+                        <button id="reset-game-btn" class="btn btn-secondary"><i class="fa-solid fa-rotate-right"></i> Reiniciar Ciudad</button>
+                        <button id="sound-toggle-btn" class="sound-btn" aria-label="Alternar sonido">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                    </div>
+
+                    <!-- Victory Overlay/Card (hidden initially) -->
+                    <div class="victory-card" id="victory-card">
+                        <div class="victory-icon-container">
+                            <i class="fa-solid fa-circle-check victory-icon"></i>
+                        </div>
+                        <h3 class="victory-title">¡Parche Verde Creado!</h3>
+                        <p class="victory-text">
+                            Al deslizar el bloque sur hacia afuera, liberaste el espacio central permitiendo que la naturaleza recupere su lugar en Quito.
+                        </p>
+                        <div class="educational-note">
+                            <strong>Didáctica y Ecología:</strong> En la ciudad, los parches verdes reducen el efecto "isla de calor", albergan biodiversidad local y actúan como "corredores biológicos". A nivel pedagógico, resolver este acertijo mediante la acción directa fomenta el <strong>aprendizaje constructivista</strong> al resolver un conflicto cognitivo-espacial inmediato.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reference Exhibit Image Card -->
+                <div class="exhibit-reference-card">
+                    <h3 class="reference-title"><i class="fa-solid fa-camera"></i> Exhibición Original en el MIC</h3>
+                    <div class="exhibit-image-wrapper">
+                        <img src="imagenes/parche-verde.jpg" alt="Módulo Parche Verde del MIC" class="exhibit-img">
+                    </div>
+                    <div class="exhibit-caption">
+                        <p>Fotografía de la exhibición real "Parche Verde" en el Museo Interactivo de Ciencias. Un desafío físico para repensar el ordenamiento territorial y la ecología urbana.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection: Trivia Didáctica -->
+            <div class="trivia-container scroll-reveal">
+                <div class="trivia-header">
+                    <i class="fa-solid fa-circle-question trivia-icon"></i>
+                    <h3 class="trivia-section-title">Trivia Didáctica: Pon a prueba tus conocimientos</h3>
+                    <p class="trivia-section-subtitle">¿Lograste asimilar las teorías del aprendizaje aplicadas al MIC? Responde y comprueba las explicaciones didácticas.</p>
+                </div>
+
+                <div class="trivia-quiz" id="trivia-quiz">
+                    <!-- Pregunta 1 -->
+                    <div class="trivia-card-question" data-question="1">
+                        <h4 class="question-text">1. ¿Qué concepto de Piaget se experimenta cuando un visitante encuentra un obstáculo físico (nudo o llave cerrada) en los módulos?</h4>
+                        <div class="options-list">
+                            <button class="option-btn" data-correct="false">
+                                <span class="option-letter">A</span>
+                                <span class="option-content">Asimilación pasiva y memoria mecánica.</span>
+                            </button>
+                            <button class="option-btn" data-correct="true">
+                                <span class="option-letter">B</span>
+                                <span class="option-content">Conflicto cognitivo que induce a una reestructuración de esquemas.</span>
+                            </button>
+                            <button class="option-btn" data-correct="false">
+                                <span class="option-letter">C</span>
+                                <span class="option-content">Condicionamiento operante por refuerzo sensorial.</span>
+                            </button>
+                        </div>
+                        <div class="feedback-box">
+                            <p class="feedback-text"></p>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="trivia-card-question" data-question="2">
+                        <h4 class="question-text">2. Según Vygotsky, ¿qué función cumple el diálogo y la colaboración entre visitantes para resolver los desafíos interactivos?</h4>
+                        <div class="options-list">
+                            <button class="option-btn" data-correct="false">
+                                <span class="option-letter">A</span>
+                                <span class="option-content">Es una distracción del aprendizaje individual puro.</span>
+                            </button>
+                            <button class="option-btn" data-correct="false">
+                                <span class="option-letter">B</span>
+                                <span class="option-content">Es una respuesta automática al condicionamiento social.</span>
+                            </button>
+                            <button class="option-btn" data-correct="true">
+                                <span class="option-letter">C</span>
+                                <span class="option-content">Actúa como andamiaje social dentro de la Zona de Desarrollo Próximo (ZDP).</span>
+                            </button>
+                        </div>
+                        <div class="feedback-box">
+                            <p class="feedback-text"></p>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="trivia-card-question" data-question="3">
+                        <h4 class="question-text">3. El principio constructivista de "aprender haciendo" (learning by doing) es una base de la didáctica del MIC. ¿Quién es uno de sus principales exponentes teóricos citado en la bitácora?</h4>
+                        <div class="options-list">
+                            <button class="option-btn" data-correct="true">
+                                <span class="option-letter">A</span>
+                                <span class="option-content">Jerome Bruner (y su teoría del aprendizaje por descubrimiento).</span>
+                            </button>
+                            <button class="option-btn" data-correct="false">
+                                <span class="option-letter">B</span>
+                                <span class="option-content">B.F. Skinner (y el conductismo radical).</span>
+                            </button>
+                            <button class="option-btn" data-correct="false">
+                                <span class="option-letter">C</span>
+                                <span class="option-content">David Ausubel (únicamente con aprendizaje memorístico).</span>
+                            </button>
+                        </div>
+                        <div class="feedback-box">
+                            <p class="feedback-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION: CUADRO COMPARATIVO INTERACTIVO -->
+    <section id="comparacion" class="comparison-section scroll-reveal">
+        <div class="container">
+            <div class="section-header-centered">
+                <i class="fa-solid fa-square-poll-horizontal comparison-section-icon"></i>
+                <h2 class="comparison-title">Cuadro Comparativo de Enfoques</h2>
+                <p class="comparison-subtitle">Haz clic en cada teoría para desplegar el análisis didáctico extendido y su aplicación práctica en informática.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <!-- Tarjeta 1: Cognitivismo -->
+                <div class="comparison-card" data-theory-card="cog">
+                    <div class="comp-card-header card-cog">
+                        <div class="comp-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Cognitivismo</h3>
+                    </div>
+                    <div class="comp-card-body">
+                        <div class="comp-meta">
+                            <span class="meta-label">Autores Clave:</span>
+                            <span class="meta-val">Piaget, Ausubel</span>
+                        </div>
+                        <div class="comp-meta">
+                            <span class="meta-label">Concepto Central:</span>
+                            <span class="meta-val">Construcción de esquemas mentales, memoria de trabajo y procesamiento.</span>
+                        </div>
+                        <div class="comp-meta">
+                            <span class="meta-label">Evidencia en el MIC:</span>
+                            <span class="meta-val">Resolución mental en "Osos en Movimiento" (construcción del trayecto).</span>
+                        </div>
+                        <button class="comp-toggle-btn">Ver Detalles Didácticos <i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Detailed Expanded Box -->
+                    <div class="comp-detail-pane">
+                        <div class="detail-inner">
+                            <h4>Aplicación en Didáctica de la Informática</h4>
+                            <p>En la programación, el cognitivismo se traduce en el desarrollo de <strong>algoritmos y mapas mentales de flujo</strong>. El estudiante debe prever estados lógicos del código en su memoria de trabajo, asimilando y acomodando estructuras de datos complejas (como bucles y condicionales) según sus conocimientos matemáticos previos.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Constructivismo -->
+                <div class="comparison-card" data-theory-card="con">
+                    <div class="comp-card-header card-con">
+                        <div class="comp-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <h3>Constructivismo</h3>
+                    </div>
+                    <div class="comp-card-body">
+                        <div class="comp-meta">
+                            <span class="meta-label">Autores Clave:</span>
+                            <span class="meta-val">Bruner, Piaget</span>
+                        </div>
+                        <div class="comp-meta">
+                            <span class="meta-label">Concepto Central:</span>
+                            <span class="meta-val">Aprender haciendo, descubrimiento activo y andamiaje enactivo.</span>
+                        </div>
+                        <div class="comp-meta">
+                            <span class="meta-label">Evidencia en el MIC:</span>
+                            <span class="meta-val">Manipulación activa de poleas en Física Interactiva y arrastre en Parche Verde.</span>
+                        </div>
+                        <button class="comp-toggle-btn">Ver Detalles Didácticos <i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Detailed Expanded Box -->
+                    <div class="comp-detail-pane">
+                        <div class="detail-inner">
+                            <h4>Aplicación en Didáctica de la Informática</h4>
+                            <p>El constructivismo se plasma en el <strong>Aprendizaje Basado en Proyectos (ABP)</strong> y en entornos lúdicos como Scratch. El alumno aprende los conceptos informáticos de forma enactiva: manipulando y arrastrando bloques físicos o lógicos, experimentando errores en tiempo real y aprendiendo mediante depuración (*debugging*).</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Histórico-Cultural -->
+                <div class="comparison-card" data-theory-card="soc">
+                    <div class="comp-card-header card-soc">
+                        <div class="comp-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3>Histórico-Cultural</h3>
+                    </div>
+                    <div class="comp-card-body">
+                        <div class="comp-meta">
+                            <span class="meta-label">Autores Clave:</span>
+                            <span class="meta-val">Vygotsky</span>
+                        </div>
+                        <div class="comp-meta">
+                            <span class="meta-label">Concepto Central:</span>
+                            <span class="meta-val">Mediación por herramientas, ZDP y andamiaje social.</span>
+                        </div>
+                        <div class="comp-meta">
+                            <span class="meta-label">Evidencia en el MIC:</span>
+                            <span class="meta-val">Distribución del agua en Ludión y discusión grupal en los módulos interactivos.</span>
+                        </div>
+                        <button class="comp-toggle-btn">Ver Detalles Didácticos <i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Detailed Expanded Box -->
+                    <div class="comp-detail-pane">
+                        <div class="detail-inner">
+                            <h4>Aplicación en Didáctica de la Informática</h4>
+                            <p>Se evidencia en la <strong>programación en parejas (Pair Programming)</strong> y en comunidades de código abierto (GitHub). El lenguaje de programación y los entornos de desarrollo (IDEs) actúan como herramientas de mediación cultural. La Zona de Desarrollo Próximo se activa a través de la tutoría o la colaboración entre compañeros.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- References Section -->
     <section id="referencias" class="references-section">
@@ -480,7 +968,16 @@
         </div>
     </footer>
 
+    <!-- Visualizador de Imagen Grande (Lightbox) -->
+    <div id="lightbox-overlay" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar vista">&times;</button>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
     <!-- JavaScript Bundle -->
-    <script src="script.js"></script>
+    <script src="script.js?v=6"></script>
 </body>
 </html>
